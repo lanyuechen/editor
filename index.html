@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="stylesheet" href="./editor.css">
+    <title>Editor2.0</title>
+</head>
+<body>
+    <div id="container">
+        <div id="toolbar"></div>
+        <div id="content">
+            <iframe id="editor"></iframe>
+        </div>
+    </div>
+    
+
+<script src="./editor.js"></script>
+<script>
+    var st = new Date();
+    var my = myEditor({
+        container:'container',
+        toolbar:'toolbar',
+        content:'content',
+        editor:'editor'
+    });
+    var et = new Date();
+    var time = et.getTime() - st.getTime();
+    console.log('开始时间='+st.getTime()+'ms');
+    console.log('结束时间='+et.getTime()+'ms');
+    console.log('运行时间='+time+'ms');
+</script>
+
+</body>
+</html>
